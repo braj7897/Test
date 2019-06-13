@@ -13,6 +13,7 @@ pipeline {
         }
     }
 }'''
+          sleep 5
         }
       }
       stage('Test') {
