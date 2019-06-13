@@ -3,22 +3,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''pipeline {
-    agent any
-    stages {
-        stage(\'Build\') {
-            steps {
-                bat \'set\'
-            }
-        }
-    }
-}'''
-          sleep 5
-        }
+        sleep 5
       }
-      stage('Test') {
-        steps {
-          sh '''pipeline {
+    }
+    stage('Test') {
+      steps {
+        sh '''pipeline {
     agent any
     stages {
         stage(\'Test\') {
@@ -46,7 +36,7 @@ pipeline {
         }
     }
 }'''
-          }
         }
       }
     }
+  }
