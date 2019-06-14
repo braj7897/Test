@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        echo 'all fail'
+        echo 'all is well and  fail'
       }
     }
     stage('Unit') {
