@@ -2,14 +2,10 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      if(Build==Test)
       steps {
         sleep 5
       }
-      else()
-      {
-        echo 'fail'
-      }
+     
     }
     stage('Test') {
       steps {
