@@ -4,10 +4,6 @@ pipeline {
     stage('Build') {
       steps {
         sleep 5
-        retry(count: 7) {
-          retry(count: 6)
-        }
-
       }
     }
     stage('Test') {
