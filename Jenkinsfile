@@ -21,8 +21,17 @@ pipeline {
       }
     }
     stage('Test') {
-      steps {
-        echo 'all is well and  fail'
+      parallel {
+        stage('Test') {
+          steps {
+            echo 'all is well and  fail'
+          }
+        }
+        stage('Rest') {
+          steps {
+            sleep 1
+          }
+        }
       }
     }
     stage('Unit') {
