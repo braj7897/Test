@@ -35,8 +35,17 @@ pipeline {
       }
     }
     stage('Unit') {
-      steps {
-        echo 'hii'
+      parallel {
+        stage('Unit') {
+          steps {
+            echo 'hii'
+          }
+        }
+        stage('call') {
+          steps {
+            echo 'calllllllllllllllllllllllllllllllllllllllllllllll'
+          }
+        }
       }
     }
   }
