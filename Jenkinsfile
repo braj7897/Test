@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Rest') {
           steps {
-            sleep(time: 1, unit: 'MINUTES')
+            sleep(time: 1, unit: 'NANOSECONDS')
           }
         }
         stage('Terminate') {
