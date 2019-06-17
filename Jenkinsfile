@@ -13,6 +13,11 @@ pipeline {
             sleep(time: 1, unit: 'MINUTES')
           }
         }
+        stage('Terminate') {
+          steps {
+            echo 'Terminatation'
+          }
+        }
       }
     }
     stage('Test') {
