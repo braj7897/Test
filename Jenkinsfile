@@ -2,10 +2,18 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sleep 5
+      parallel {
+        stage('Build') {
+          steps {
+            sleep 5
+          }
+        }
+        stage('Rest') {
+          steps {
+            sleep(time: 1, unit: 'MINUTES')
+          }
+        }
       }
-     
     }
     stage('Test') {
       steps {
