@@ -32,6 +32,11 @@ pipeline {
             sleep 1
           }
         }
+        stage('html') {
+          steps {
+            fileExists 'D:\\Websites\\AspNetCore-master\\AspNetCore-master'
+          }
+        }
       }
     }
     stage('Unit') {
