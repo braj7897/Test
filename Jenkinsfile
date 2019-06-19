@@ -2,22 +2,8 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            sleep 5
-          }
-        }
-        stage('Rest') {
-          steps {
-            sleep(time: 1, unit: 'NANOSECONDS')
-          }
-        }
-        stage('Terminate') {
-          steps {
-            echo 'Terminatation'
-          }
-        }
+      steps {
+        sleep 5
       }
     }
     stage('Test') {
